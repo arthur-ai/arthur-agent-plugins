@@ -1,0 +1,7 @@
+{
+  "name": "arthur-tools",
+  "version": "0.1.0",
+  "description": "Skills for working with the Arthur platform",
+  "author": {"name": "Arthur AI"},
+  "keywords": ["arthur", "dashboards", "metrics", "upsolve", "sql"]
+}

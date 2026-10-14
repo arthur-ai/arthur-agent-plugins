@@ -1,0 +1,14 @@
+{
+  "name": "arthur-agent-plugins",
+  "description": "Arthur AI's Claude Code plugins.",
+  "owner": {
+    "name": "Arthur AI"
+  },
+  "plugins": [
+    {
+      "name": "arthur-tools",
+      "source": "./plugins/arthur-tools",
+      "description": "Skills for working with the Arthur platform"
+    }
+  ]
+}
