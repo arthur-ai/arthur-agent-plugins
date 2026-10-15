@@ -26,11 +26,11 @@ From the repository root, package the complete skill, including `references/`. E
 
 ### ChatGPT
 
-1. Open **Profile → Skills → New Skill → Upload from your computer**.
-2. Upload the `arthur-dashboards.zip` created in the repository root.
-3. Start a new chat and ask ChatGPT to use `arthur-dashboards`.
+1. Open **Plugins → Skills → Installed** and check for `arthur-dashboards`. If you already installed the **arthur-tools** plugin, you can use its skill instead.
+2. If it is missing, select **Create → Upload from your computer** and upload the `arthur-dashboards.zip` created in the repository root.
+3. Once installed, start a new chat and ask ChatGPT to use `arthur-dashboards`.
 
-See [OpenAI's skill installation instructions](https://developers.openai.com/cookbook/examples/chatgpt/chatgpt_prompt_guide/chatgpt_prompt_guide).
+Skill uploading is available to eligible Business, Enterprise, Healthcare, and Edu users, subject to workspace settings. If **Create** or **Upload from your computer** is unavailable, check with your workspace administrator. See [OpenAI's current skill instructions](https://help.openai.com/en/articles/20001066-skills-in-chatgpt).
 
 ### Claude
 
