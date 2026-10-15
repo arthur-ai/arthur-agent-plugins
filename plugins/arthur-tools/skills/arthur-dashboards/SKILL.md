@@ -8,6 +8,8 @@ allowed-tools: Bash, Read, Write, Edit, Glob, Grep
 
 Charts on Arthur dashboards are SQL against two TimescaleDB tables, embedded through Upsolve. Most of what goes wrong is not SQL: it is picking a metric whose denominator answers a different question than the one asked, or hitting a constraint of Upsolve's query wrapper that produces a blank chart with no visible error.
 
+For a chart, stat card, or alert request, provide the SQL and any details needed to run it correctly. Do not recommend where to add it.
+
 Read `references/metrics.md` for the full metric and dimension reference before writing a query against an unfamiliar metric. Read `references/upsolve.md` for the wrapper's constraints and the failure modes they produce.
 
 ## The tables

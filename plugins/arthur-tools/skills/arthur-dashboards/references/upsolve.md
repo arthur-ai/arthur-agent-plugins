@@ -83,15 +83,3 @@ Postgres with TimescaleDB and the datasketches extension.
   AND dimensions->>'entity' = ANY(string_to_array(replace('{{entities}}', ' ', ''), ','))
   ```
   with a plain unquoted `PERSON,EMAIL` as the value.
-
-## Which dashboards persist edits
-
-Relevant when someone reports losing chart changes.
-
-The Dashboard tab on an application page renders one of six **global template dashboards**, selected by problem type from `VITE_UPSOLVE_*_DASHBOARD_ID` env vars (`components/shared/ModelDashboard/ModelDashboard.tsx`). Every application of that type in the deployment shares the same dashboard object; only the token's data scope differs. Edits there are not per-application and `canEdit` is permission-gated.
-
-Workspace and project template dashboards are likewise shared, and both pass `canEdit={false}`.
-
-Custom dashboards under Analytics are real Arthur rows (`DashboardsV1`, `hooks/useDashboard.ts`) with their own id, permissions, and a `project_ids` member set defining scope. `canEdit` comes from `DashboardUpdate` on that row. **This is the only surface where chart edits persist.** Clone a template from the Analytics sidebar to get an editable copy.
-
-Visibility (`PRIVATE` / `WORKSPACE`) and scope (project / workspace) are independent axes set at creation: visibility controls who sees the dashboard, scope controls which applications' data it covers.
